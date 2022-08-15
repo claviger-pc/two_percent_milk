@@ -66,8 +66,8 @@
  
         default_layer {
             bindings = <
-                &td1
-                &td0
+                <&mwh SCROLL_DOWN>
+                <&mwh SCROLL_UP>
             >;
         };
         volume_layer {
