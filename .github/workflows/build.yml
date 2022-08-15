@@ -33,13 +33,13 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (dumbpad)
+      - name: West Build (two_percent_milk)
         run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=two_percent_milk -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: two_percent_milk Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 two_percent_milk.uf2
-      - name: Archive (dumbpad)
+      - name: Archive (two_percent_milk)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
