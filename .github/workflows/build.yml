@@ -35,10 +35,10 @@ jobs:
         run: west zephyr-export
       - name: West Build (dumbpad)
         run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=two_percent_milk -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: dumbpad Kconfig file
+      - name: two_percent_milk Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 dumbpad.uf2
+        run: cp build/zephyr/zmk.uf2 two_percent_milk.uf2
       - name: Archive (dumbpad)
         uses: actions/upload-artifact@v2
         with:
