@@ -28,7 +28,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp UP>, <&kp PG_UP>, <&bootloader>;
+            bindings = <&mwh SCROLL_UP>, <&kp PG_UP>, <&bootloader>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
@@ -36,7 +36,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
 //            bindings = <&lt 2 DOWN>, <&kp PG_DN>, <&out OUT_BLE>;
-            bindings = <&kp DOWN>, <&kp PG_DN>, <&out OUT_BLE>;
+            bindings = <&mwh SCROLL_DOWN>, <&kp PG_DN>, <&out OUT_BLE>;
         };
         td2: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
